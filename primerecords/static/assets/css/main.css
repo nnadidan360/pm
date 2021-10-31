@@ -1,0 +1,62 @@
+
+.up{
+	margin-top: 60px; 
+	background-color: #141414; 
+}
+.site-plan{
+	border-radius:10px;
+	border:2px solid #bcbe56;
+	text-align:left;
+	flex:1;
+}
+
+pre {
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: var(--color-canvas-subtle);
+	padding: 16px;
+	overflow: auto;
+	border-radius: 6px;
+}
+.site-plan .white-bo{background:#fff;border-radius:5px;overflow:hidden;
+}
+.site-plan .white-bo p{color:#333739!important;}
+.bo-box{background:#F1F2F6;position:relative;}
+
+.bo-box .slide-down{
+position:absolute;
+width:32px;height:32px;
+display:flex;
+align-items: center;
+justify-content: center;
+color:#313260;
+font-size:16px;
+border-radius:50%;
+background:#fff;
+box-shadow:0 0 0 10px #F1F2F6;
+bottom:-16px;
+left:calc(50% - 16px);
+}
+
+.site-plan .white-bo h4{color:#353760;}
+.bo-box .icon{color:#FFf;font-size:16px;}
+.bo-box h1{color: #bcbe56!important;font-size:2.5rem;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:-2.33333px;margin:3px 0 0;line-height:1;}
+.bo-box h1 small{font-size:1.25rem;vertical-align:top;}
+.bo-box p{font-size:12px;color:#333739!important;margin:2px 0 0 0;}
+.bo-box .equip{font-size:10px;}
+.min-dep {flex:1;}
+.min-dep p{margin:0;display:flex;align-items:center;font-size:12px;letter-spacing:-.125px;}
+.min-dep p b{color:#353448;font-weight:500;letter-spacing:-.5px;padding:0 3px;}
+.min-dep p .icon{font-size:5px;color:#56BE89;padding-right:5px;}
+.min-dep p svg{}
+.site-plan h6 ,.site-plan h4 {color:#fff;}
+.site-plan .form-group {position:relative;}
+.site-plan .form-group .form-control{padding-left:32px;padding-right:64px;font-size:14px;height:40px;}
+.site-plan .form-group .float-ix{position:absolute;color:#3ACB84;}
+.site-plan .form-group .float-ix.icon{left:10px;height:20px;line-height:20px;top:10px;font-size:12px;}
+.site-plan .form-group .float-ix.usd{right:10px;height:24px;line-height:24px;top:8px;font-size:10px;font-weight:500;background:#E9F2EC;padding:0px 10px;color:#3ACB84;}
+.site-plan .form-group .notice{font-size:10px;line-height:1;}
+.site-plan .resutl .each-border{padding-left:1rem;border-left:2px solid #56BE89;}
+.site-plan .resutl p{margin:0;letter-spacing:0;padding-top:4px;font-size:12px;line-height:1;}
+.site-plan .resutl h4{line-height:1;letter-spacing:-.5px;margin:0;font-size:18px;}
+.site-plan .resutl h4 small{font-size:10px;letter-spacing:0px;color:#8CE3B7;}

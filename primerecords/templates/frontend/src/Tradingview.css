@@ -1,0 +1,62 @@
+
+.coin-thumb-xsmall {
+    height: 18px;
+    width: 18px;
+}
+ 
+.tbl-mob-info.smaller {
+    letter-spacing: -0.3px;
+}
+.small {
+    font-size: 13px;
+}.small,
+.smaller {
+    letter-spacing: -0.8px;
+}
+
+.smaller {
+    font-size: 11px;
+}
+#delta_line_chart {
+    height: 250px;
+    min-width: 220px;
+}
+.price {
+    letter-spacing: -0.5px;
+}
+
+.price.up {
+    color: #00B600;
+}
+
+.price.down {
+    color: #FB0000;
+}
+
+.coin-price-alt {
+    color: #56667F;
+    font-size: 12px !important;
+}
+
+.coin-price-alt.change {
+    font-size: 10px !important;
+}
+.widget-chart-price {
+    color: #313131 !important;
+}
+.for{
+    color: #2E7AD0;
+}
+.small-chart-container {
+    width: 100%;
+    max-width: 90px;
+    margin: 0;
+    padding: 0;
+}
+.small-chart {
+    width: 100%;
+    max-width: 90px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+} 

@@ -1,0 +1,89 @@
+#carousel-testimonials .item {
+    height: 100vh;
+    color: #fff;
+    -webkit-background-size: cover;
+    background-position: center center;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    background-attachment: initial;
+}
+/* #carousel-testimonials .item.item-1 { */
+    /* background-image: url('bg-user.jpg'); */
+  /* } */
+  
+  /* #carousel-testimonials .item.item-2 { */
+    /* background-image: url('bg-user-2.jpg'); */
+  /* }
+  
+  #carousel-testimonials .item.item-3 { */
+    /* background-image: url('bg-user-3.jpg'); */
+  /* } */
+  
+  #carousel-testimonials .carousel-control {
+    display: none;
+  }
+  
+  #carousel-testimonials .item > div {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  #carousel-testimonials .item > div:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 480px;
+    /* background-image: -webkit-linear-gradient(91deg,#141516 7%,rgba(43,51,65,0) 100%);
+    background-image: linear-gradient(-1deg,#141516 7%,rgba(43,51,65,0) 100%); */
+  }
+  
+  #carousel-testimonials blockquote {
+    border-left: 0;
+    padding: 10px 30px;
+  }
+  
+  #carousel-testimonials blockquote p {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-style: italic;
+    color: #FFF;
+    line-height: 31px;
+    opacity: .8;
+  }
+  
+  #carousel-testimonials blockquote footer {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  #carousel-testimonials blockquote footer span {
+    color: #eee;
+  }
+  
+  #carousel-testimonials .carousel-indicators {
+    text-align: right;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding-right: 30px;
+    margin-bottom: 5px;
+  }
+  
+  #carousel-testimonials .carousel-indicators li {
+    display: inline-block;
+    background-color: rgba(255,255,255,.5);
+    border: 0;
+    margin-right: 13px;
+  }
+  
+  #carousel-testimonials .carousel-indicators li:last-child {
+    margin-right: 0;
+  }
+  
+  #carousel-testimonials .carousel-indicators li:hover {
+    background-color: rgba(255,255,255,.8);
+  }

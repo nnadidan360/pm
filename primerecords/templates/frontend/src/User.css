@@ -1,0 +1,33 @@
+.dashboard{
+    background-color: white !important;
+}
+.bigyellow{
+    background-color: #e0bc00 !important;
+    border-top: #e0bc00 !important;
+    color: #fff !important;
+    font-size: large;
+}
+.bigred{
+    background-color: #ef5350;
+    color: #fff !important;
+    font-size: large;
+    font-weight: 700
+
+}
+.infogray{
+    border-top: none;
+    color: gray;
+    font-weight: 700
+}
+.infogreen{
+    border-top: none;
+    color: #06D73E !important;
+    font-weight: 900
+}.infored{
+    border-top: none;
+    color: #ef5350 !important;
+    font-weight: 700
+}
+.pricewidget{
+    background: lightgray;
+}
