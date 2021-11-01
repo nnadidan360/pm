@@ -248,8 +248,7 @@ def get_crypto_data():
     }
     headers = {
     'Accepts': 'application/json',
-    # 'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c',
-    # 'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c',
+  
 
     # my api key
     'X-CMC_PRO_API_KEY': '439a6f18-ad33-459b-84e9-16b5f51c81bc',
@@ -326,7 +325,7 @@ def fundAccount(request):
    
     if request.user.profile.fund_method == 'BTC':
         btc_data = get_crypto_data()
-        btc_data = round((1/btc_data)* float(request.user.profile.fund_amount), 8)
+        # btc_data = round((1/btc_data)* float(request.user.profile.fund_amount), 8)
         
     else:
         btc_data = None
@@ -334,7 +333,7 @@ def fundAccount(request):
     if request.user.profile.fund_method == 'ETH':
         eth_data = get_crypto_data_eth()
         print(type(eth_data))
-        eth_data = round((1/eth_data)* float(request.user.profile.fund_amount), 8)
+        # eth_data = round((1/eth_data)* float(request.user.profile.fund_amount), 8)
         
     else:
         eth_data = None
