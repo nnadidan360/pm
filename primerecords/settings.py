@@ -87,22 +87,21 @@ WSGI_APPLICATION = 'primerecords.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'sample1234',
-    #     'USER': 'nnadi',
-    #     'PASSWORD':'',
-    #     'HOST':'',
-    #     'PORT':'', 
-    # }
+    
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddrb64nu3sm62c',
+        'HOST': 'ec2-3-228-86-183.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'kqxhhpfrtsnswq',
+        'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
     }
 } 
 
-#  db_from_env = dj_database_url.config()
-#  DATABASES['default'].update(db_from_env)
+
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
