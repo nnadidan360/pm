@@ -96,6 +96,7 @@ DATABASES = {
         'USER': 'kqxhhpfrtsnswq',
         'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
     }
+    
 } 
 
 
