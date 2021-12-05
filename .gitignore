@@ -1,6 +1,7 @@
 /prime
 __pycache__
 db.sqlite3
+primerecords/templates/frontend
 
 
 

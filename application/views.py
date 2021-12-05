@@ -15,12 +15,27 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
-
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from .forms import LoginForm, SignUpForm
 
+from .serializers import profileSerializer
+from rest_framework import generics
+
+class profileList(generics.ListCreateAPIView):
+    queryset = profile.objects.all()
+    serializer_class = profileSerializer
+
+
+class detailTodo(generics.RetrieveAPIView):
+    queryset = profile.objects.all()
+    serializer_class = profileSerializer
+
+
+class fight(generics.RetrieveUpdateDestroyAPIView):
+    queryset = profile.objects.all()
+    serializer_class = profileSerializer
 
 
 
@@ -229,16 +244,7 @@ def calculate_amount():
 
 
 def get_crypto_data():
-    # api_url = "https://api.coinmarketcap.com/v2/ticker/?limit=10"
-
-    # try:
-    #     data = requests.get(api_url).json()
-    # except Exception as e:
-    #     print(e)
-    #     data = dict()
-    #     print(data)
-
-    # return data
+    
    
 
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
@@ -262,7 +268,7 @@ def get_crypto_data():
         data = json.loads(response.text)['data']['1']['quote']['USD']['price']
 
         print(data)
-        # print()
+        
         return round(data, 4)
 
 
@@ -325,21 +331,18 @@ def fundAccount(request):
    
     if request.user.profile.fund_method == 'BTC':
         btc_data = get_crypto_data()
-        btc_data = round((1/btc_data)* float(request.user.profile.fund_amount), 8)
+        # btc_data = round((1/btc_data)* float(request.user.profile.fund_amount), 8)
         
     else:
         btc_data = None
     
     if request.user.profile.fund_method == 'ETH':
         eth_data = get_crypto_data_eth()
-        print(type(eth_data))
-        eth_data = round((1/eth_data)* float(request.user.profile.fund_amount), 8)
+        # print(type(eth_data))
+        # eth_data = round((1/eth_data)* float(request.user.profile.fund_amount), 8)
         
     else:
         eth_data = None
-
-
-
 
     return render(request, "fund-account.html", {'credit':updatecredit, "msg": msg, 'data':btc_data, 'eth_data':eth_data })
 

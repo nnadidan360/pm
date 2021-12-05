@@ -4,9 +4,10 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 from django.urls import path, re_path
+from django.urls.conf import include
 from application import views
 from django.contrib.auth.views import LogoutView
-
+from application.views import profileList,detailTodo,fight,fundAccount
 
 # app_name = 'application'
 
@@ -29,11 +30,20 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('settings', views.profileUpdate, name='profileUpdate'),
     path('withdraw', views.withdraw, name='withdraw'),
-    path('fundAccount', views.fundAccount, name='fundAccount'),
     path('depositHistory', views.depositHistory, name='depositHistory'),
     path('earnings', views.earnings, name='earnings'),
     path('investments', views.investments, name='investments'),
     path('purchasePlan', views.purchasePlan, name='purchasePlan'),
+
+
+
+
+    # api path
+    path('api/ready', profileList.as_view()),
+    path('<int:pk>/api/check', fight.as_view()),
+    path('<int:pk>/api/detail', detailTodo.as_view()),
+
+
 
     # path('settings', views.profileUpdate, name='profileUpdate'),
 

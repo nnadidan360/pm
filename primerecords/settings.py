@@ -42,20 +42,35 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'application',
     'widget_tweaks',
+    'corsheaders',
+    'knox',
 ]
+
+REST_FRAMEWORK ={
+    'DEFAULT_AUTHENTICATION_CLLASSES':
+    ('knox.auth.TokenAuthentication',)
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+'http://localhost:3000',
+'http://localhost:8000',
+)
+
 
 ROOT_URLCONF = 'primerecords.urls'
 LOGIN_REDIRECT_URL = "home"   # Route defined in app/urls.py
@@ -88,15 +103,19 @@ WSGI_APPLICATION = 'primerecords.wsgi.application'
 
 DATABASES = {
     
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddrb64nu3sm62c',
-        'HOST': 'ec2-3-228-86-183.compute-1.amazonaws.com',
-        'PORT': '5432',
-        'USER': 'kqxhhpfrtsnswq',
-        'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'ddrb64nu3sm62c',
+    #     'HOST': 'ec2-3-228-86-183.compute-1.amazonaws.com',
+    #     'PORT': '5432',
+    #     'USER': 'kqxhhpfrtsnswq',
+    #     'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
+    # }
     
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 } 
 
 
