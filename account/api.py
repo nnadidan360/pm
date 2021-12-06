@@ -1,5 +1,6 @@
+
 from rest_framework import generics, permissions
-from .serializers import RegisterSerializer, UserSerializer, LoginSerializer, UserProfileSerializer, UserProfileUpdateSerializer
+from .serializers import RegisterSerializer, UserSerializer, LoginSerializer
 from rest_framework.response import Response
 from knox.models import AuthToken
 

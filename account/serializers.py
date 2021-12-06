@@ -25,10 +25,11 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
 
 
+
+
 class LoginSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ('id','username','email','password')
+    username = serializers.CharField(write_only=True)
+    password = serializers.CharField(write_only=True)
 
     def validate(self, data):
         user = authenticate(**data)
@@ -40,7 +41,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
 
 
-class UserSerializerWithToken(serializers.ModelSerializer):
+# class UserSerializerWithToken(serializers.ModelSerializer):
     token = serializers.SerializerMethodField()
     password = serializers.CharField(write_only=True)
 
@@ -66,10 +67,14 @@ class UserSerializerWithToken(serializers.ModelSerializer):
 
 
 
+
+
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id','username','email')
+
+
 
 
 
