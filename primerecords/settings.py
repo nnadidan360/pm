@@ -86,20 +86,21 @@ WSGI_APPLICATION = 'primerecords.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
+DATABASES = {
+    'default':dj_database_url.parse('postgres://mjarcxvb:XP44TS0btvvSXwEdNgPz7n4A0uvbSdTv@kashin.db.elephantsql.com/mjarcxvb')
     
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'ddrb64nu3sm62c',
-#         'HOST': 'ec2-3-228-86-183.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#         'USER': 'kqxhhpfrtsnswq',
-#         'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
-#     }
     
-# } 
+    # {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'ddrb64nu3sm62c',
+    #     'HOST': 'ec2-3-228-86-183.compute-1.amazonaws.com',
+    #     'PORT': '5432',
+    #     'USER': 'kqxhhpfrtsnswq',
+    #     'PASSWORD': '3bea263d045a79a7193741d07bebe0f77a42430cd8a075aebce936056248ff32',
+    # }
+    
+} 
 
-DATABASES['default'] = dj_database_url.parse('postgres://mjarcxvb:XP44TS0btvvSXwEdNgPz7n4A0uvbSdTv@kashin.db.elephantsql.com/mjarcxvb', conn_max_age=600)
 
 
 
